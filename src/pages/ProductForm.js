@@ -38,7 +38,6 @@ const ProductForm = () => {
     let newTotal = 0;
     product.map((item) => (newTotal += item.total_price));
 
-    console.log(newTotal);
     setTotal(newTotal);
   }, [product]);
 
@@ -291,7 +290,6 @@ const ProductForm = () => {
                             .units.filter(
                               (unit) => unit.name === e.target.value
                             )[0].price;
-                          console.log(priceUnit);
 
                           setProduct((currentProduct) =>
                             currentProduct.map((product) =>
